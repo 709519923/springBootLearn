@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.learn1.demo.mapper.UserMapper">
+    <select id="findAll" resultType="com.learn1.demo.entity.User">
+        SELECT * FROM user LIMIT 5
+    </select>
+
+    <insert id="insert" parameterType="com.learn1.demo.entity.User">
+        INSERT INTO user (name, age, email)
+        VALUES (#{name}, #{age},#{email})
+    </insert>
+
+    <delete id="deleteUserById" parameterType="int">
+        DELETE FROM user WHERE id = #{id}
+    </delete>
+
+    <update id="updateUser" parameterType="com.learn1.demo.entity.User">
+        UPDATE user
+        SET name = #{name},
+            age = #{age},
+            email = #{email}
+        WHERE id = #{id}
+    </update>
+</mapper>
+
+
+        <!--针对main文件的mapper进行配置-->
