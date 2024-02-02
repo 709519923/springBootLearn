@@ -1,5 +1,6 @@
 package com.learn1.demo.controller;
 
+import com.learn1.demo.entity.Appointment;
 import com.learn1.demo.entity.User;
 import com.learn1.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,4 +38,7 @@ public class Usercontroller {
     public void updateUser(@RequestBody User user) {
         userService.updateUser(user);
     }
+
+
+
 }

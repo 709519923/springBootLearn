@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.learn1.demo.mapper.AppointmentMapper">
+    <select id="findAll" resultType="com.learn1.demo.entity.Appointment">
+        SELECT * FROM Appointment order by date desc
+    </select>
+
+</mapper>
+
+
+        <!--针对main文件的mapper进行配置-->
