@@ -5,8 +5,7 @@ import com.learn1.demo.entity.User;
 import com.learn1.demo.service.AppointmentService;
 import com.learn1.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,5 +18,10 @@ public class Appointmentcontroller {
     @GetMapping ("/read_appointment") //查
     public List<Appointment> getAppointment(){
         return appointmentService.findAll();
+    }
+
+    @PostMapping("/update_appointment") // 改
+    public void updateAppointment(@RequestBody Appointment appointment) {
+        appointmentService.updateAppointment(appointment);
     }
 }

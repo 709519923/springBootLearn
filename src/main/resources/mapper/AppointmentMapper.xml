@@ -6,6 +6,12 @@
         SELECT * FROM Appointment order by date desc
     </select>
 
+<!--预约同意或拒绝-->
+    <update id="updateAppointment" parameterType="com.learn1.demo.entity.Appointment">
+        UPDATE appointment
+        SET ApplicationStatus = #{applicationStatus}
+        WHERE AppointmentID = #{appointmentID}
+    </update>
 </mapper>
 
 

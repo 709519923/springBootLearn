@@ -1,5 +1,6 @@
 package com.learn1.demo.service;
 import com.learn1.demo.entity.Appointment;
+import com.learn1.demo.entity.User;
 import com.learn1.demo.mapper.AppointmentMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,4 +17,7 @@ public class AppointmentService {
         return appointmentMapper.findAll();
     }
 
+    public void updateAppointment(Appointment appointment) {
+        appointmentMapper.updateAppointment(appointment);
+    }
 }
