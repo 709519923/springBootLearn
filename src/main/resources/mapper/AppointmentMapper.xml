@@ -6,6 +6,9 @@
         SELECT * FROM Appointment order by date desc
     </select>
 
+    <select id="findByDate" resultType="com.learn1.demo.entity.Appointment">
+        SELECT TimeSlot FROM Appointment WHERE date = #{date}
+    </select>
 <!--预约同意或拒绝-->
     <update id="updateAppointment" parameterType="com.learn1.demo.entity.Appointment">
         UPDATE appointment

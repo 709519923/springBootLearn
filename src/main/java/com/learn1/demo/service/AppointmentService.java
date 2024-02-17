@@ -13,7 +13,10 @@ public class AppointmentService {
     //实例化UserMapper
     @Autowired
     private AppointmentMapper appointmentMapper;
-    public List<Appointment> findAll(){
+    public List<Appointment> findAll(String date){
+        if (date != null && !date.isEmpty()) {
+            return appointmentMapper.findByDate(date);
+        }
         return appointmentMapper.findAll();
     }
 

@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface AppointmentMapper {
     List<Appointment> findAll();
-
+    List<Appointment> findByDate(String date);
     void updateAppointment(Appointment appointment);
 }

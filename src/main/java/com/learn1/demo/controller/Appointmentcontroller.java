@@ -16,8 +16,8 @@ public class Appointmentcontroller {
     private AppointmentService appointmentService;
 
     @GetMapping ("/read_appointment") //查
-    public List<Appointment> getAppointment(){
-        return appointmentService.findAll();
+    public List<Appointment> getAppointment(String date){
+        return appointmentService.findAll(date);
     }
 
     @PostMapping("/update_appointment") // 改
